@@ -1,0 +1,103 @@
+/**/
+    body {background-color: #672A3F;}
+/*Heading box*/
+    .heading-box{
+        width: 100%;
+        height: 300px;
+        margin-top: 100px;
+        margin-left: -8px;
+        position: fixed;
+        background-color: #BF9BD8;
+    }
+    .heading-box h1{
+        margin-top:15px;
+        font-size: 90px;
+        font-family: 'Shrikhand';
+        color:#4C5270;
+        text-align: center;
+        margin-bottom:-15px;
+    }
+    .heading-box p{
+        font-family: 'Quicksand';
+        text-align: center;
+        color:#4C5270;
+        font-weight: 600;
+        font-size: 30px;
+    }
+    .heading-box p a{
+        color:#4C5270;
+    }
+    .heading-box p a:hover{
+        color:#4C5270;
+        font-weight: 700;
+    }
+/*Login box*/
+    .form-box {
+        width:90%;
+        max-width: 1200px;
+        height:400px;
+        position: fixed;
+        margin-top:600px;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        padding: 50px 60px 70px;
+        text-align: center;
+        background-color: #FFEBF4;
+        border:#2F3036 solid 1px;
+    }
+/*Username and password input*/
+    .input-field {
+        background: #FFFCFC;
+        opacity: 0.8;
+        margin-left: 25px;
+        margin-top: 20px;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        height: 80px;
+        transition: max-height 0.5s;
+        overflow: hidden;
+        border:#2F3036 solid 1px;
+        width:1150px;  
+    }
+    input {
+        width: 100%;
+        background: transparent;
+        border: none;
+        outline: 0;
+        padding: 18px 15px;
+        font-family: 'Quicksand';
+        font-size: 30px;
+    }
+    .box input[type="text"]:focus, .box input[type="password"]:focus {
+        background-color: #FFFCFC;
+        color: #4C5270;
+        
+    }
+    ::placeholder {
+        color: #4C5270;
+        font-size: 30px;
+        }
+/*submit button*/
+    .btn-field {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .btn-field .button {
+        background-color: #8e3b58;
+        color: white;
+        font-family: 'Quicksand';
+        font-size: 30px;
+        height: 80px;
+        border-radius: 3px;
+        outline: none;
+        cursor: pointer;
+        margin-top: 30px;
+        margin:20px;
+    }
+
+    .box input[type="submit"]:hover {
+        background-color: #55172d;
+    }

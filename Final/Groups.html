@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Shrikhand' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link href="/Final/CSS/NavBar.css" rel="stylesheet">
+    <link href="/Final/CSS/Groups.css" rel="stylesheet">
+    <title>Student Forum - Groups</title>
+
+
+<style>
+</style>
+
+</head>
+<body>
+    <header>   
+        <ul class="NavBar">
+            <li class="Home"><a href="/Final/StudentForum.html">Student Forum</a></li> 
+            <li><button onclick="logout()" class="Logout">Logout</button></li>
+            <script>
+                function logout() {            
+                            window.open("Login.html");
+                            window.close("StudentForum.html");
+                        }
+            </script>
+        </ul>
+    </header>
+    <div class="heading-box">
+        <h1>Groups</h1>
+        <p>Click on one of the forum threads below to join a disscussion on your favourite hobby</p>
+
+    </div>
+    <section>  
+        <div class="main">
+                <table class="group">
+                    <tr> 
+                        <th style="width:20px;">No.</th>                  
+                        <th>Topic</th>
+                        <th>Date</th>
+                        <th>Comments</th>
+                    </tr>
+                    <tr class="test">                    
+                        <td class="number"></td>
+                        <td class="topic"></td>
+                        <td class="date"></td>
+                        <td class="comment"></td>
+                    </tr>
+                </table>
+        </div>
+    </section>
+    <script src="/Final/thread.js"></script>
+
+    <script>
+        console.log(threads);
+        var topic = document.querySelector('.number');
+        for (let thread of threads) {
+            var html = 
+            `<p class="title">
+                        ${thread.id}
+                    </p>
+            `
+            topic.insertAdjacentHTML('beforeend', html);
+        }
+        var topic = document.querySelector('.topic');
+        for (let thread of threads) {
+            var html = 
+            `    <a href="Thread.html?${thread.id}">
+                    <p class="title">
+                        ${thread.title}
+                    </p>
+
+            `
+            topic.insertAdjacentHTML('beforeend', html);
+        }
+        var date = document.querySelector('.date');
+        for (let thread of threads) {
+            var html = 
+            `
+            <div class="bottom">
+                <p class="timestamp">
+                    ${new Date(thread.date).toLocaleString()}
+                </p>
+            </div>
+            `
+            date.insertAdjacentHTML('beforeend', html);
+        }
+        var comment = document.querySelector('.comment');
+        for (let thread of threads) {
+            var html = 
+            `<p class="comment-count">
+                    ${thread.comments.length} comments
+                </p>
+            `
+            comment.insertAdjacentHTML('beforeend', html);
+        }
+    </script>
+</body>
+</html>

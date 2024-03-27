@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Shrikhand' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Student Forum - Homepage</title>
+    <link href="/Final/CSS/NavBar.css" rel="stylesheet">
+    <link href="/Final/CSS/StudentForum.css" rel="stylesheet">
+</head>
+<body>
+    <header>   
+        <ul class="NavBar">
+            <li class="Home"><a href="/Final/StudentForum.html">Student Forum</a></li> 
+            <li><button onclick="logout()" class="Logout">Logout</button></li>
+            <script>
+                function logout() {            
+                            window.open("Login.html");
+                            window.close("StudentForum.html");
+                        }
+            </script>
+        </ul>
+    </header>
+    <div class="heading-box">
+        <div class="bg-image"></div>
+        <h1 id="title">Welcome</h1>
+        <p>This forum site is a place for students to connect with each other through their interests
+            <br> <a href="/Final/About.html">Read more</a>
+        </p>
+        <div class="contact">
+            <p >
+                <a href="mailto:someone@example.com?subject=Student%20Forum%20Queries">@studentforum</a> 
+                &nbsp&nbsp&nbsp 
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram" style="font-size:30px; color:white;"></i></a>
+                &nbsp&nbsp
+                <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-f" style="font-size:30px; color:white;"></i></a>
+                &nbsp&nbsp
+                <a href="https://twitter.com/?lang=en" target="_blank"><i class="fa fa-twitter" style="font-size:30px; color:white;"></i></a>
+            </p>
+        </div>
+    </div>
+    <div class="us-box">
+        <h1>user guidelines</h1>
+        <p>We all love a great discussion. <br>Lets make our time more enjoyable by following a few basic ground rules.
+            <br><a href="/Final/UserGuidelines.html">read more</a>
+        </p>
+    </div>
+    <div class="buttons">
+        <a href="/Final/Groups.html"><button class="groups">
+            <i class="material-icons" style=" font-size:100px;">chat</i><br><br>
+            GROUPS</button></a>
+        <a href="/Final/Members.html"><button class="members">
+            <i class="fa fa-group" style="font-size:115px"></i><br><br>
+            MEMBERS</button></a>
+        <a href="/Final/Profile.html"><button class="profile">
+            <i class="fa fa-user" style="font-size:115px"></i><br><br>
+            PROFILE</button></a>
+    </div>
+  
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Shrikhand' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Student Forum - My Profile</title>
+    <link href="/Final/CSS/NavBar.css" rel="stylesheet">
+    <link href="/Final/CSS/Profile.css" rel="stylesheet">
+</head>
+<body>
+    <header>   
+        <ul class="NavBar">
+            <li class="Home"><a href="/Final/StudentForum.html">Student Forum</a></li> 
+        </ul>
+    </header>
+    <div class="heading-box">
+        <h1 id="title">My Profile</h1>
+    </div>
+    <div class="Image">
+        <p><i class="fa fa-user" style="font-size:300px"></i><br><br>
+            <a href="mailto:someone@example.com?subject=Change%20
+            Image&body=I%20would%20like%20to%20change%20my%20profile%20image%20to%3A%0A">Change profile image</a>
+        </p>
+    </div>
+    <div class="member-box">
+        <h1 class="heading">Username
+            <a href="mailto:someone@example.com?subject=Change%20
+            Username&body=I%20would%20like%20to%20change%20my%20Username%20to%3A%0A">(change)</a>
+        </h1>
+        <h1 class="name" id="name"></h1>
+        <h1 class="heading">Description
+            <a href="mailto:someone@example.com?subject=Change%20description&body=I%20would%20like%20to%20change%20my%20
+            Profile%20description%20to%3A%0A">(change)</a>
+        </h1>
+        <p class="desc">No description</p>
+    </div>
+</div>
+<script>
+    document.getElementById("name").innerHTML = localStorage.getItem("username");
+</script>
+</body>

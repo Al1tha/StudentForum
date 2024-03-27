@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Shrikhand' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <title>Student Forum - Login</title>
+    <link href="/Final/CSS/Login.css" rel="stylesheet">
+    <link href="/Final/CSS/NavBar.css" rel="stylesheet">
+    
+    <script>
+        //login
+        
+    </script>
+</head>
+</html>
+<body>
+    <header>   
+        <ul class="NavBar">
+            <li class="Home">Student Forum</li> 
+        </ul>
+    </header>
+    <div class="heading-box">
+        <h1 id="title">Login</h1>
+        <p>Welcome Back! Enter your username and password to get started.
+        <br>If you don't have an account, click <a href="/Final/Register.html">here</a> to register</p>
+    </div>
+
+    <div class="form-box">
+        <form class="box">
+            <div class="input-group">
+                <div class="input-field" id="nameField">
+                    <input type="text" placeholder="Username" id="Username">
+                </div>
+                <div class="input-field">
+                    <input type="password" placeholder="Password" id="Password">
+                </div>
+            </div>
+            <div class="btn-field">
+                <input type="Submit" value="Submit" name="" onclick= 'check()' class="button">
+            </div>
+        </form>
+    </div>
+    <script>
+              //login
+        
+//checking
+function check(){
+    var storedName = localStorage.getItem('username');
+    var storedPw = localStorage.getItem('password');
+
+    var userName = document.getElementById('Username');
+    var userPw = document.getElementById('Password');
+
+    if(userName.value == storedName && userPw.value == storedPw){
+        alert('You are logged in.');
+        window.open('StudentForum.html');
+    }else{
+        alert('Error on login');
+    }
+  }
+    </script>
+</div>
+</body>
+</html>

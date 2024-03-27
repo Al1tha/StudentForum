@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Shrikhand' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <title>Student Forum - register</title>
+    <link href="/Final/CSS/Login.css" rel="stylesheet">
+    <link href="/Final/CSS/NavBar.css" rel="stylesheet">
+    
+    <script>
+        //login
+        function store(){
+            var username = document.getElementById('username');
+            var password = document.getElementById('password');
+            var lowerCaseLetters = /[a-z]/g;
+            var upperCaseLetters = /[A-Z]/g;
+            var numbers = /[0-9]/g;
+
+            if(username.value.length == 0){
+                alert('Please fill in email');
+
+            }else if(password.value.length == 0){
+                alert('Please fill in password');
+
+            }else if(username.value.length == 0 && password.value.length == 0){
+                alert('Please fill in email and password');
+
+            }else if(password.value.length > 8){
+                alert('Max of 8');
+
+            }else{
+                localStorage.setItem('username', username.value);
+                localStorage.setItem('password', password.value);
+                alert('Your account has been created');
+                console.log('username',username.value);
+                window.open('Login.html');
+            }}
+    </script>
+</head>
+</html>
+<body>
+    <header>   
+        <ul class="NavBar">
+            <li class="Home">Student Forum</li> 
+        </ul>
+    </header>
+    <div class="heading-box">
+        <h1 id="title">Register</h1>
+        <p>Create a username and password and you're good to go!</p>
+    </div>
+    
+    <div class="form-box">
+        <form name="form-register">
+            <div class="input-group">
+                <div class="input-field">
+                    <input type="text" placeholder="Username" id="username" required>
+                </div>
+                <div class="input-field">
+                    <input type="password" placeholder="Password" id="password">
+                </div>
+            </div>
+            <div class="btn-field">
+                <input type="Submit" value="Submit" name="" onclick="store()" class="button" id="rgstr_btn">
+            </div>
+        </form>
+    </div>
+        
+</div>
+</body>
+</html>

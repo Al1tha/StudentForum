@@ -1,0 +1,54 @@
+/*header*/
+    /* This is the styling of the navigation bar*/
+    /* The .NavBar class was assigned to an unordered list*/
+    .NavBar {
+        list-style-type: none;
+        border-top: 4px solid #ED579E;
+        border-bottom: 5px solid #ED579E;
+        background-color: #F8EAFF;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        position: fixed;
+        float:top;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height:100px;
+    }
+    .NavBar li a {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        color:#8B73FF;
+    }
+    .NavBar li a:hover{
+        color: #6f5dc9;
+    }
+    /* The .Home class was assigned to the title of the website. 
+    This is the styling for the heading*/
+    .Home{ 
+        float: left;
+        position: fixed;
+        padding-left: 30px;
+        padding-top: 10px;
+        color:#8B73FF;
+        font-family: 'Shrikhand';
+        font-size: 60px;
+        letter-spacing: 3px;
+    }
+    .Logout{
+        margin-left: 1300px;
+        margin-top: 20px;
+        padding: 5px 20px;
+        border:none;
+        font-family: 'Shrikhand';
+        font-size: 30px;
+        color: white;
+        background-color:#672A3F;
+        border-radius: 5px;
+    }
+    .Logout:hover{
+        background-color:#57001f;
+        cursor: pointer;
+    }

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://fonts.googleapis.com/css?family=Shrikhand' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+        <title>Student Forum - About Us</title>
+        <link href="/Final/CSS/NavBar.css" rel="stylesheet">
+        
+        <style>
+            body{
+                background-color: #F8EAFF;
+            }
+            section{
+                margin-top: 140px;
+                margin-left: 40px;
+                margin-right: 40px;
+                border: 1px solid #2F3036;
+            }
+            .heading{
+                font-size: 90px;
+                font-family: 'Shrikhand';
+                color:#4C5270;
+                text-align: center;
+                margin-top: 10px;
+            }
+            .information{
+                font-family: 'Quicksand';
+                font-weight: 400;
+                color:#4C5270;
+                font-size: 30px;
+                margin-top:-50px;
+                margin-left:50px;
+                margin-right:50px;
+                line-height: 50px;
+            }
+        </style>
+    </head>
+<body>
+    <header>   
+        <ul class="NavBar">
+            <li class="Home"><a href="/Final/StudentForum.html">Student Forum</a></li> 
+            <li><button onclick="logout()" class="Logout">Logout</button></li>
+            <script>
+                function logout() {            
+                            window.open("Login.html");
+                            window.close("StudentForum.html");
+                        }
+            </script>
+        </ul>
+    </header>
+    <section>
+        <h1 class="heading">About Us</h1>
+        <p class="information">Welcome to an amazing online forum website that has been specifically designed 
+            for the student community. This platform serves as a hub for students to receive and share insightful 
+            information and advice on any topic. It provides a great opportunity for students to engage in group discussions, 
+            share their experiences, and learn from one another. The forum consists of different threads that cater to various 
+            interests, making it easy for students to find and join discussions that align with their areas of interest. 
+            Whether you are looking to connect with fellow students, seek advice on academic or personal matters, 
+            or simply share your thoughts and opinions, this forum is the perfect place for you!</p>
+    </section>
+</body>
+</html>
+

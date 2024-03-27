@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Shrikhand' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <title>Student Forum - User Guidelines</title>
+    <link href="/Final/CSS/NavBar.css" rel="stylesheet">
+    <style>
+        body{
+            background-color: #F8EAFF;
+        }
+        section{
+            margin-top: 140px;
+            margin-left: 40px;
+            margin-right: 40px;
+            border: 1px solid #2F3036;
+        }
+        .heading{
+            font-size: 90px;
+            font-family: 'Shrikhand';
+            letter-spacing: 4px;
+            color:#4C5270;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .information{
+            font-family: 'Quicksand';
+            font-weight: 400;
+            color:#4C5270;
+            font-size: 30px;
+            margin-top:-50px;
+            margin-left:50px;
+            margin-right:50px;
+        }
+        .points{
+            font-family: 'Quicksand';
+            font-weight: 400;
+            color:#4C5270;
+            font-size: 25px;
+            margin-left:80px;
+            margin-right:50px;
+        }
+        .points li{
+            margin-top:20px;
+        }
+        .points li a{
+            color:#4C5270;
+        }
+        .points li a:hover{
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <header>   
+        <ul class="NavBar">
+            <li class="Home"><a href="/Final/StudentForum.html">Student Forum</a></li> 
+            <li><button onclick="logout()" class="Logout">Logout</button></li>
+            <script>
+                function logout() {            
+                            window.open("Login.html");
+                            window.close("StudentForum.html");
+                        }
+            </script>
+        </ul>
+    </header>
+<section>
+    <h1 class="heading">User Guidelines</h1>
+    <p class="information">
+        When using a forum, it's important to follow some basic guidelines to ensure that everyone has a positive experience. 
+        Here are a few tips to keep in mind:
+        <ol class="points">
+            <li>Be respectful: Remember that everyone on the forum is a real person with their own thoughts and feelings. 
+                Treat others the way you would like to be treated. </li>
+            <li>Stay on topic: Make sure that your posts and comments are relevant to the topic at hand. 
+                If you have something else you'd like to discuss, join a new thread.</li>
+            <li>Avoid spamming: Don't post the same message multiple times.</li>
+            <li>Use appropriate language: Avoid using profanity or offensive language, and be mindful of your tone when posting.</li>
+            <li><a href="mailto:someone@example.com?subject=Report%20of%20inappropriate%20behaiviour&body=I%20want%20to%20report%20
+                (username)%20for%3A%0A%0A">Report</a>
+                 inappropriate behavior: If you see someone behaving inappropriately on the forum, report it to the forum administrator or moderator.
+            </li>
+        </ol>
+    </p>
+</section>
+</body>
+</html>

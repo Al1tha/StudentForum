@@ -1,0 +1,76 @@
+/**/
+body {
+    background-color: #F8EAFF;
+}
+/*Heading box*/
+.heading-box{
+    width: 100%;
+    height: 250px;
+    margin-top: -292px;
+    margin-left: -8px;
+    position: fixed;
+    background-color: #BF9BD8;
+}
+.heading-box h1{
+    margin-top:20px;
+    font-size: 90px;
+    font-family: 'Shrikhand';
+    color:#4C5270;
+    text-align: center;
+}
+.heading-box p{
+    font-family: 'Quicksand';
+    text-align: center;
+    color:#4C5270;
+    font-weight: 600;
+    font-size: 30px;
+    margin-top:-50px;
+}
+/* Members boxes */
+/* Create four equal columns that floats next to each other */
+.member-box {
+    float: left;
+    width: 25%;
+    padding: 10px;
+    height: 300px; 
+    margin-left: 50px;
+    margin-right:50px;
+    margin-bottom:50px;
+    width:240px;
+    height: 350px;
+    background-color: #672A3F;
+    border-radius: 5px;
+    
+    }
+
+    /* Clear floats after the columns */
+    .row{
+    margin-top: 400px;
+    }
+    .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+
+.member-box h1{
+
+    font-family: 'Quicksand';
+    color:white;
+    text-align:center ;
+}
+.member-box p{
+    font-family: 'Quicksand';
+    color:white;
+    text-align: center;
+}
+/*
+.members{
+    width: 33.33%;
+    padding: 10px;
+}
+.row{
+    content: "";
+    display: table;
+    clear:both;
+}

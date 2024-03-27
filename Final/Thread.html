@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Shrikhand' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link href="/Final/CSS/Thread.css" rel="stylesheet">
+    <link href="/Final/CSS/NavBar.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <header>   
+        <ul class="NavBar">
+            <li class="Home"><a href="/Final/StudentForum.html">Student Forum</a></li> 
+
+        </ul>
+    </header>
+    <div class="heading-box">
+        <h1 class="pageHead">        
+
+    </h1>
+        <p class="header">
+            
+        </p>
+        
+    </div>
+    <section>
+        <div class="main">
+            <textarea placeholder="Join the discussion..." ></textarea>
+            <button class="addComment">add comment</button>
+            <div class="comments">
+            </div>
+        </div>
+        <script>
+            var defaultThreads = [
+                {
+                    id: 1,
+                    title: "Cooking club",
+                    author: "unknown",
+                    date: Date.now(),
+                    content: "Thread content",
+                    comments: [
+
+                    ]
+                },
+                {
+                    id: 2,
+                    title: "Music club",
+                    author: "unknown",
+                    date: Date.now(),
+                    content: "Thread content 2",
+                    comments: [
+
+                    ]
+                },
+                {
+                    id: 3,
+                    title: "Football club",
+                    author: "unknown",
+                    date: Date.now(),
+                    content: "Thread content 3",
+                    comments: [
+
+                    ]
+                },
+                {
+                    id: 4,
+                    title: "Art club",
+                    author: "unknown",
+                    date: Date.now(),
+                    content: "Thread content 4",
+                    comments: [
+
+                    ]
+                },
+                {
+                    id: 5,
+                    title: "Book club",
+                    author: "unknown",
+                    date: Date.now(),
+                    content: "Thread content 4",
+                    comments: [
+
+                    ]
+                },
+                {
+                    id: 6,
+                    title: "Gaming club",
+                    author: "unknown",
+                    date: Date.now(),
+                    content: "Thread content 4",
+                    comments: [
+
+                    ]
+                },
+                {
+                    id: 7,
+                    title: "Dance club",
+                    author: "unknown",
+                    date: Date.now(),
+                    content: "Thread content 4",
+                    comments: [
+
+                    ]
+                }
+                
+            ]
+            var threads = defaultThreads
+            if (localStorage && localStorage.getItem('threads')) {
+            threads = JSON.parse(localStorage.getItem('threads'));
+            } else {
+            threads = defaultThreads;
+            localStorage.setItem('threads', JSON.stringify(defaultThreads));
+            }
+        </script>
+        <script>
+            var id = window.location.search.slice(1);
+            var thread = threads.find(t => t.id == id);
+            var pageHead= document.querySelector('.pageHead');
+            var pageHeadHTML = `
+                <h1>${thread.title}</h1>
+            `
+            pageHead.insertAdjacentHTML('beforeend', pageHeadHTML)
+            var header = document.querySelector('.header');
+            var headerHtml = `
+                <div class="bottom">
+                    <p>
+
+                        ${new Date(thread.date).toLocaleString()};
+                        ${thread.comments.length} comments 
+                    </p>
+                </div>
+            `
+            header.insertAdjacentHTML('beforeend', headerHtml)
+    
+            function addComment(comment) {
+                var commentHtml = `
+                    <div class="comment">
+                        <p class="comment-ts">
+                            ${comment.author} @
+                            ${new Date(comment.date).toLocaleString()}   
+                            </p>    
+                        <p class="user">
+
+                        </p>
+                        <div class="comment-content">
+                            ${comment.content}
+                        </div>
+                    </div>
+                `
+                comments.insertAdjacentHTML('beforeend', commentHtml);
+            }
+    
+            var comments = document.querySelector('.comments');
+            for (let comment of thread.comments) {
+                addComment(comment);
+            }
+    
+            var btn = document.querySelector('button');
+            btn.addEventListener('click', function() {
+                var txt = document.querySelector('textarea');
+                var comment = {
+                    content: txt.value,
+                    date: Date.now(),
+                    author: 'unknown'
+                }
+                addComment(comment);
+                txt.value = '';
+                thread.comments.push(comment);
+                localStorage.setItem('threads', JSON.stringify(threads));
+            })
+        </script>
+
+    </section>
+</body>
+</html>
